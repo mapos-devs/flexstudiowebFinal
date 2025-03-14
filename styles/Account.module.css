@@ -1,0 +1,437 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.accountContainer {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left Sidebar Styles */
+.sidebar {
+    width: 40%;
+    background-color: #d9d7d0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.accountHeader {
+    margin-bottom: 3rem;
+}
+
+.accountTitle {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f93800;
+    margin: 0;
+    line-height: 1;
+}
+
+.welcomeText {
+    font-size: 0.9rem;
+    color: #313131;
+    margin-top: 0.5rem;
+    position: relative;
+    padding-top: 0.5rem;
+}
+
+.welcomeText::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background-color: #313131;
+}
+
+.accountNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accountNav li {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #313131;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 0.5rem;
+}
+
+.accountNav li:hover,
+.accountNav li.active {
+    border-bottom-color: #313131;
+}
+
+.subItem {
+    padding-left: 1rem !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* Right Content Area Styles */
+.content {
+    width: 60%;
+    background-color: #0c0c0c;
+    color: white;
+    padding: 2rem;
+}
+
+/* User Info Section */
+.profileSection {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.profileImage {
+    margin-right: 1.5rem;
+}
+
+.profileImg {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userName {
+    font-size: 2rem;
+    color: #f93800;
+    margin: 0 0 0.5rem 0;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.flag {
+    margin-right: 0.5rem;
+}
+
+.editButton {
+    margin-top: 0.5rem;
+}
+
+.editProfileBtn {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+.editIcon {
+    margin-right: 0.5rem;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.infoItem h3 {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+    margin: 0 0 0.5rem 0;
+}
+
+.infoItem p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.divider {
+    height: 1px;
+    background-color: #313131;
+    margin: 2rem 0;
+}
+
+.statsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.milestonesSection,
+.statsSection {
+    width: 48%;
+}
+
+.milestonesSection h3,
+.statsSection h3 {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin: 0 0 1.5rem 0;
+}
+
+.milestone,
+.stat {
+    margin-bottom: 1.5rem;
+}
+
+.milestone h4,
+.stat h4 {
+    font-size: 0.9rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.milestone p,
+.stat p {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin: 0;
+}
+
+/* Sessions Section */
+.sessionsContainer {
+    width: 100%;
+}
+
+.sessionsList {
+    width: 100%;
+}
+
+.sessionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #313131;
+}
+
+.sessionItem h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.moreInfoBtn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Payment History Section */
+.paymentContainer {
+    width: 100%;
+}
+
+.paymentTable {
+    width: 100%;
+}
+
+.tableHeader {
+    display: flex;
+    border-bottom: 1px solid #313131;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.headerCell {
+    flex: 1;
+    font-size: 0.8rem;
+}
+
+.tableRow {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid #313131;
+}
+
+.tableCell {
+    flex: 1;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.paidStatus {
+    background-color: #f93800;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.pendingStatus {
+    background-color: #f93800;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.receiptBtn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.downloadIcon {
+    margin-right: 0.25rem;
+}
+
+/* Edit Account Section */
+.editContainer {
+    width: 100%;
+}
+
+.editTitle {
+    font-size: 1rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.profileImageEdit {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profileImgEdit {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.editForm {
+    width: 100%;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.formInput,
+.formSelect {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #313131;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.formSelect {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1em;
+}
+
+/* Logout Section */
+.logoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.logoutTitle {
+    font-size: 4rem;
+    color: white;
+    margin: 0 0 1rem 0;
+}
+
+.logoutText {
+    font-size: 1rem;
+    color: #a0a0a0;
+    margin: 0 0 3rem 0;
+    max-width: 80%;
+}
+
+.logoutButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.yesButton,
+.noButton {
+    padding: 0.75rem 3rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #f93800;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .accountContainer {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .content {
+        width: 100%;
+    }
+
+    .accountTitle {
+        font-size: 3rem;
+    }
+
+    .contactInfo,
+    .statsContainer {
+        flex-direction: column;
+    }
+
+    .milestonesSection,
+    .statsSection {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .tableHeader,
+    .tableRow {
+        flex-wrap: wrap;
+    }
+
+    .headerCell,
+    .tableCell {
+        flex: 0 0 50%;
+        margin-bottom: 0.5rem;
+    }
+}

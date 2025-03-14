@@ -1,7 +1,15 @@
 :root {
+  --primary-color: #ff4500;
+  --background-dark: #121212;
+  --background-light: #e6e3dc;
+  --text-light: #ffffff;
+  --text-dark: #121212;
+  --step-indicator-width: 40px;
   --background: #ffffff;
   --foreground: #171717;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -39,6 +47,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 /* Ensure all elements fill the viewport */
 html,
 body {
