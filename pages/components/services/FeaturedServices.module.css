@@ -1,0 +1,215 @@
+/*********************************************
+  Section Container
+*********************************************/
+.featuredServicesSection {
+  padding-top: 30px;
+  margin: 0 auto; /* Auto horizontal margin for centering */
+  padding-top: 120px;
+  padding-right: 110px;
+  padding-left: 110px;
+  background-color: var(--bg);
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Approximate to screenshot's font */
+  color: #333; /* Base text color */
+  padding-bottom: 30px;
+}
+
+/*********************************************
+  Headers & Text
+*********************************************/
+.headerContainer {
+  margin-bottom: 1.5rem;
+}
+.headerRightSide {
+  padding-left: 15px;
+  margin-top: -10px;
+}
+
+.headerRightSide p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.headerRightSide span {
+  font-size: 10px;
+}
+.featuredTitle {
+  font-size: 40px;
+  font-weight: bold;
+  width: 450px;
+  padding-right: 10px;
+  transform: scaleY(1.5);
+  color: var(--pc); /* Red color to match screenshot heading */
+}
+.divider {
+  width: 2px;
+  display: block;
+  right: 0;
+  top: 7px;
+  position: absolute;
+  height: 100%;
+  background-color: var(--bl);
+  height: 30px;
+}
+
+.tagline {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+  margin: 0;
+}
+
+.description {
+  line-height: 1.6;
+  font-size: 20px;
+  line-height: 35px;
+  margin-bottom: 2rem;
+  width: calc(100% - 465px);
+  text-align: left;
+}
+.secondDescContainer {
+  width: 100%;
+  display: flex;
+  padding-top: 30px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.servicesHeadingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-top: 60px;
+}
+
+.servicesHeading {
+  font-size: 15px;
+
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.exploreLink {
+  font-size: 15px;
+  color: var(--bl);
+  text-decoration: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.exploreLink span {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.exploreLink:hover {
+  border-color: var(--pc);
+}
+
+/*********************************************
+  Horizontally Scrollable Images
+*********************************************/
+.imageScrollContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  padding-bottom: 1rem;
+}
+
+.imageScrollContainer::-webkit-scrollbar {
+  height: 6px; /* Adjust scrollbar thickness if you like */
+}
+
+.imageScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Adjust scrollbar color */
+  border-radius: 3px;
+}
+
+.imageWrapper {
+  flex: 0 0 auto; /* Ensures items don’t shrink, remain side-by-side */
+  width: 400px; /* Adjust as needed for your design */
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.serviceImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/*********************************************
+  Hover Banner
+*********************************************/
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background-color: rgba(180, 163, 155, 0.3);
+  border-top: 2px solid var(--txt);
+  border-bottom: 2px solid var(--txt);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.banner h3,
+.banner svg {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #d9d7d0;
+}
+
+.banner svg {
+  margin-left: 5px;
+  transition: 0.7s ease-in-out;
+}
+.imageWrapper:hover .banner svg {
+  transform: rotate(30deg);
+}
+
+.imageWrapper:hover .banner {
+  opacity: 1;
+}
+
+.underlineContainer {
+  width: 460px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.underline {
+  width: 260px;
+  height: 2px;
+  background-color: var(--bl);
+  margin-right: 15px;
+}
+.underlineText {
+  width: auto;
+  text-align: start;
+}
+.underlineText p {
+  font-size: 10px;
+}
+
+/*********************************************
+  Responsive Adjustments (Optional)
+*********************************************/
+@media (max-width: 600px) {
+  .featuredTitle {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,155 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: var(--wh);
+  background-color: var(--bl);
+}
+
+/* --- Left Section --- */
+.leftSection {
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+}
+
+/* The main display area (image or video) */
+.mainDisplay {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* The actual image/video in the main display */
+.mainMedia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Thumbnails container */
+.thumbnails {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Each thumbnail */
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--pc);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* Image/video inside the thumbnail */
+.thumbMedia {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fade in animation class */
+.fadeIn {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* --- Right Section --- */
+.rightSection {
+  width: 40%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.innerContent {
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  padding-right: 60px;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 15px;
+
+  font-weight: 700;
+  border-bottom: 2px solid white;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: var(--pc);
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+  line-height: 35px;
+  color: var(--bg);
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.label {
+  color: var(--bg);
+  font-size: 15px;
+}
+
+.forInfo {
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.benefit {
+  margin: 1rem 0;
+}
+
+.lifestyleTitle {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.lifestyleDesc {
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.bookButton {
+  margin-top: 1.5rem;
+  background-color: transparent;
+  color: var(--wh);
+  border: 1px solid var(--pc);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.bookButton:hover {
+  background-color: var(--pc);
+  color: var(--wh);
+}

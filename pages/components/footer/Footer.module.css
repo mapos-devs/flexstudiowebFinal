@@ -1,0 +1,150 @@
+.footer {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text by default */
+  padding-left: 110px;
+  padding-top: 90px;
+  font-family: sans-serif; /* Example font family */
+}
+
+/* Upper section with two columns */
+.upperSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.leftSection {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.rightSection {
+  padding-right: 110px;
+
+  text-align: right;
+}
+
+/* Large heading style */
+.heading {
+  font-size: 60px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Orange text (e.g., for “FLEX STUDIO” or “ASHRAFIEH”) */
+.orangeText {
+  color: var(--pc); /* Use your desired orange shade */
+}
+
+/* Location list styles */
+.locations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.locations {
+  width: 400px;
+}
+
+.locations li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locations li {
+  margin-bottom: 1rem;
+}
+
+.phone {
+  color: #fff; /* Keep phone text white */
+  font-weight: normal;
+}
+
+/* Lower section with links and "Back to Top" */
+.lowerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 35px;
+  flex-direction: column;
+  width: 400px;
+}
+
+.footerLinks,
+.rightSection {
+  height: 170px;
+}
+
+.socialLinks {
+  width: 200px;
+  display: flex;
+  margin-bottom: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.socialLinks svg {
+  font-size: 20px;
+}
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.backToTop a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.backToTop a:hover {
+  text-decoration: underline;
+}
+/* Fade out to the right */
+@keyframes fadeOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation: fadeOutRight 0.5s forwards;
+}
+
+/* Fade in from the left */
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeInLeft 0.5s forwards;
+}

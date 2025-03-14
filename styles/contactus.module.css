@@ -1,0 +1,151 @@
+/* Global container styles */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  overflow-y: scroll;
+  font-family: Arial, sans-serif;
+  gap: 2rem;
+  background-color: var(--bg);
+  color: var(--bl);
+  padding: 110px;
+}
+
+/* Upper section with two columns */
+.upperSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Left section style for container elements */
+.leftSection {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.lowerSectionLeft span {
+  padding-bottom: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--bl);
+}
+
+.lowerSectionLeft svg {
+  transform: rotate(30deg);
+  margin-left: 5px;
+}
+
+/* Right section (Table of Contents) */
+.rightSection {
+  padding-right: 110px;
+  text-align: right;
+}
+
+/* Title container styling */
+.titleContainer {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Under container for dash and update info */
+.underContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.titleContainer h1 {
+  font-size: 60px;
+  color: var(--pc);
+  margin-bottom: -11px;
+  letter-spacing: 0px;
+}
+
+/* Dash styling under title */
+.dash {
+  width: calc(100% - 180px);
+  height: 3px;
+  background-color: var(--bl);
+}
+
+.underContainer p {
+  font-size: 13px;
+  width: 180px;
+  margin-left: 10px;
+}
+
+/* Location list styles */
+.locations {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  width: 400px;
+}
+
+.locations li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Phone number styling */
+.phone {
+  color: var(--bl);
+  font-weight: normal;
+}
+/* Container for the form to ensure spacing */
+.formContainer {
+  margin-top: 2rem;
+}
+
+/* The form itself */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px; /* Adjust as needed */
+  margin-left: auto; /* Align form to the right if you wish */
+}
+
+/* Rows that contain one or two inputs side by side */
+.inputRow {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Text inputs and textarea styling */
+.contactForm input,
+.contactForm textarea {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid var(--bl);
+  background-color: var(--bg);
+  color: #000;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Submit button styling */
+.submitBtn {
+  background-color: var(
+    --bl
+  ); /* or var(--bl) if you want to use your existing variable */
+  color: var(--wh);
+  border: none;
+  padding: 1.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}

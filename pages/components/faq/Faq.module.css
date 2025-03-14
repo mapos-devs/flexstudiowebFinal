@@ -1,0 +1,96 @@
+/* /components/Faq.module.css */
+
+.faqContainer {
+  padding-top: 40px;
+  margin: 0 auto;
+  background-color: var(--bg); /* Replace with your desired background color */
+  color: #333; /* Replace with your desired text color */
+}
+.title,
+.subtitle,
+.description,
+.faqItem {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.faqContainer img {
+  margin-left: 110px;
+}
+
+.description span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 55px;
+  margin-bottom: 40px;
+  color: var(--pc);
+  transform: scaleY(1.7); /* Increase the factor as needed */
+  transform-origin: top; /* Ensures the stretch happens upward */
+  letter-spacing: -4px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.description {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.faqList {
+  margin-top: 2rem;
+}
+
+.faqItem {
+  border-top: 1px solid black;
+  padding-top: 20px;
+}
+
+.faqQuestion {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: left;
+}
+
+.toggleSign {
+  font-weight: bold;
+  margin-left: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.openSign {
+  transform: rotate(180deg);
+}
+
+/* Answer wrapper using transform and padding for a smooth expand/collapse */
+.faqAnswerWrapper {
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  padding: 0 0;
+  transition: transform 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+}
+
+.faqAnswerWrapper.open {
+  transform: scaleY(1);
+  opacity: 1;
+  padding: 16px 0; /* Adjust this value to control vertical spacing */
+}
+
+.faqAnswer {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
