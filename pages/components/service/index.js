@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import styles from "./service.module.css";
 import Image from "next/image";
@@ -40,7 +42,7 @@ export default function Service() {
         style={{ backgroundImage: `url(${item.src})` }}
       >
         <Image
-          src={item.src}
+          src={item.src || "/placeholder.svg"}
           alt="Thumbnail"
           fill={true}
           style={{ objectFit: "contain" }}
@@ -69,7 +71,7 @@ export default function Service() {
               ) : (
                 <Image
                   className={styles.thumbMedia}
-                  src={thumb.src}
+                  src={thumb.src || "/placeholder.svg"}
                   alt="Thumbnail"
                   width={70}
                   height={70}

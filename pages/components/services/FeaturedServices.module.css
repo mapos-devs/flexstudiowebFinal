@@ -3,13 +3,16 @@
 *********************************************/
 .featuredServicesSection {
   padding-top: 30px;
-  margin: 0 auto; /* Auto horizontal margin for centering */
+  margin: 0 auto;
+  /* Auto horizontal margin for centering */
   padding-top: 120px;
   padding-right: 110px;
   padding-left: 110px;
   background-color: var(--bg);
-  font-family: "Helvetica Neue", Arial, sans-serif; /* Approximate to screenshot's font */
-  color: #333; /* Base text color */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* Approximate to screenshot's font */
+  color: #333;
+  /* Base text color */
   padding-bottom: 30px;
 }
 
@@ -19,6 +22,12 @@
 .headerContainer {
   margin-bottom: 1.5rem;
 }
+
+.titleRow {
+  display: flex;
+  flex-direction: row;
+}
+
 .headerRightSide {
   padding-left: 15px;
   margin-top: -10px;
@@ -32,14 +41,17 @@
 .headerRightSide span {
   font-size: 10px;
 }
+
 .featuredTitle {
   font-size: 40px;
   font-weight: bold;
   width: 450px;
   padding-right: 10px;
   transform: scaleY(1.5);
-  color: var(--pc); /* Red color to match screenshot heading */
+  color: var(--pc);
+  /* Red color to match screenshot heading */
 }
+
 .divider {
   width: 2px;
   display: block;
@@ -67,6 +79,7 @@
   width: calc(100% - 465px);
   text-align: left;
 }
+
 .secondDescContainer {
   width: 100%;
   display: flex;
@@ -74,6 +87,7 @@
   flex-direction: row;
   justify-content: flex-end;
 }
+
 .servicesHeadingContainer {
   display: flex;
   flex-direction: row;
@@ -114,23 +128,29 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 1rem;
-  overflow-x: auto; /* Allows horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  overflow-x: auto;
+  /* Allows horizontal scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
   padding-bottom: 1rem;
 }
 
 .imageScrollContainer::-webkit-scrollbar {
-  height: 6px; /* Adjust scrollbar thickness if you like */
+  height: 6px;
+  /* Adjust scrollbar thickness if you like */
 }
 
 .imageScrollContainer::-webkit-scrollbar-thumb {
-  background-color: #ccc; /* Adjust scrollbar color */
+  background-color: #ccc;
+  /* Adjust scrollbar color */
   border-radius: 3px;
 }
 
 .imageWrapper {
-  flex: 0 0 auto; /* Ensures items don’t shrink, remain side-by-side */
-  width: 400px; /* Adjust as needed for your design */
+  flex: 0 0 auto;
+  /* Ensures items don't shrink, remain side-by-side */
+  width: 400px;
+  /* Adjust as needed for your design */
   height: 500px;
   position: relative;
   overflow: hidden;
@@ -176,6 +196,7 @@
   margin-left: 5px;
   transition: 0.7s ease-in-out;
 }
+
 .imageWrapper:hover .banner svg {
   transform: rotate(30deg);
 }
@@ -191,25 +212,86 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .underline {
   width: 260px;
   height: 2px;
   background-color: var(--bl);
   margin-right: 15px;
 }
+
 .underlineText {
   width: auto;
   text-align: start;
 }
+
 .underlineText p {
   font-size: 10px;
 }
 
 /*********************************************
-  Responsive Adjustments (Optional)
+  Responsive Adjustments
 *********************************************/
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .featuredServicesSection {
+    padding: 60px 20px 30px;
+  }
+
+  .titleRow {
+    flex-direction: column;
+  }
+
   .featuredTitle {
-    font-size: 2rem;
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .headerRightSide {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .underlineContainer {
+    width: 100%;
+  }
+
+  .secondDescContainer {
+    justify-content: flex-start;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .servicesHeadingContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .imageWrapper {
+    width: 280px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featuredTitle {
+    font-size: 28px;
+  }
+
+  .imageWrapper {
+    width: 240px;
+    height: 300px;
+  }
+
+  .banner {
+    height: 70px;
+  }
+
+  .banner h3 {
+    font-size: 1.1rem;
   }
 }

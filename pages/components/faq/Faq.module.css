@@ -3,19 +3,24 @@
 .faqContainer {
   padding-top: 40px;
   margin: 0 auto;
-  background-color: var(--bg); /* Replace with your desired background color */
-  color: #333; /* Replace with your desired text color */
-}
-.title,
-.subtitle,
-.description,
-.faqItem {
+  background-color: var(--bg);
+  /* Replace with your desired background color */
+  color: #333;
+  /* Replace with your desired text color */
   padding-left: 110px;
   padding-right: 110px;
 }
 
-.faqContainer img {
-  margin-left: 110px;
+.faqHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.description {
+  margin-bottom: 2rem;
+  color: #666;
 }
 
 .description span {
@@ -27,19 +32,16 @@
   font-size: 55px;
   margin-bottom: 40px;
   color: var(--pc);
-  transform: scaleY(1.7); /* Increase the factor as needed */
-  transform-origin: top; /* Ensures the stretch happens upward */
+  transform: scaleY(1.7);
+  /* Increase the factor as needed */
+  transform-origin: top;
+  /* Ensures the stretch happens upward */
   letter-spacing: -4px;
 }
 
 .subtitle {
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
-}
-
-.description {
-  margin-bottom: 2rem;
-  color: #666;
 }
 
 .faqList {
@@ -86,11 +88,54 @@
 .faqAnswerWrapper.open {
   transform: scaleY(1);
   opacity: 1;
-  padding: 16px 0; /* Adjust this value to control vertical spacing */
+  padding: 16px 0;
+  /* Adjust this value to control vertical spacing */
 }
 
 .faqAnswer {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .faqContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .faqHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .faqHeader img {
+    margin-bottom: 1rem;
+    width: 200px;
+    height: auto;
+  }
+
+  .description {
+    margin-bottom: 1rem;
+  }
+
+  .faqQuestion {
+    font-size: 18px;
+    padding: 0.75rem 0;
+  }
+
+  .faqAnswer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faqHeader img {
+    width: 150px;
+  }
+
+  .faqQuestion {
+    font-size: 16px;
+  }
 }

@@ -1,3 +1,5 @@
+"use client";
+
 // /components/Faq.js
 import { useState } from "react";
 import styles from "./Faq.module.css";
@@ -23,15 +25,8 @@ export default function Faq({ faqs = faqData }) {
   return (
     <div className={styles.faqContainer}>
       {/* Header area */}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "flex-end",
-        }}
-      >
-        <Image src={"/faq.png"} width={255} height={135} />
+      <div className={styles.faqHeader}>
+        <Image src={"/faq.png"} width={255} height={135} alt="FAQ" />
         <p className={styles.description}>
           Check out more of our{" "}
           <strong style={{ borderBottom: "1px solid black" }}>

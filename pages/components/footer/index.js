@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import styles from "./Footer.module.css";
 import { useState, useEffect } from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
@@ -68,15 +68,7 @@ const Footer = () => {
             <FaFacebook />
             <FaYoutube />
           </div>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+          <div className={styles.footerNavLinks}>
             <a href="#" className={styles.link}>
               TERMS & CONDITIONS
             </a>
@@ -88,9 +80,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        {/* <div className={styles.backToTop}>
-          <a href="#">Back to Top</a>
-        </div> */}
         <div className={styles.rightSection}>
           <h2 className={styles.heading}>
             IN THE HEART OF{" "}

@@ -1,9 +1,12 @@
 .footer {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text by default */
+  background-color: #000;
+  /* Black background */
+  color: #fff;
+  /* White text by default */
   padding-left: 110px;
   padding-top: 90px;
-  font-family: sans-serif; /* Example font family */
+  font-family: sans-serif;
+  /* Example font family */
 }
 
 /* Upper section with two columns */
@@ -20,7 +23,6 @@
 
 .rightSection {
   padding-right: 110px;
-
   text-align: right;
 }
 
@@ -32,9 +34,10 @@
   font-weight: bold;
 }
 
-/* Orange text (e.g., for “FLEX STUDIO” or “ASHRAFIEH”) */
+/* Orange text (e.g., for "FLEX STUDIO" or "ASHRAFIEH") */
 .orangeText {
-  color: var(--pc); /* Use your desired orange shade */
+  color: var(--pc);
+  /* Use your desired orange shade */
 }
 
 /* Location list styles */
@@ -43,9 +46,6 @@
   padding: 0;
   margin: 0;
   line-height: 1.6;
-}
-
-.locations {
   width: 400px;
 }
 
@@ -54,14 +54,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.locations li {
   margin-bottom: 1rem;
 }
 
 .phone {
-  color: #fff; /* Keep phone text white */
+  color: #fff;
+  /* Keep phone text white */
   font-weight: normal;
 }
 
@@ -95,9 +93,19 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .socialLinks svg {
   font-size: 20px;
 }
+
+.footerNavLinks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .link {
   color: #fff;
   text-decoration: none;
@@ -117,12 +125,14 @@
 .backToTop a:hover {
   text-decoration: underline;
 }
+
 /* Fade out to the right */
 @keyframes fadeOutRight {
   from {
     transform: translateX(0);
     opacity: 1;
   }
+
   to {
     transform: translateX(100px);
     opacity: 0;
@@ -139,6 +149,7 @@
     transform: translateX(-100px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -147,4 +158,65 @@
 
 .fadeIn {
   animation: fadeInLeft 0.5s forwards;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 20px 30px;
+  }
+
+  .heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .locations {
+    width: 100%;
+  }
+
+  .locations li {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .phone {
+    margin-top: 0.25rem;
+  }
+
+  .lowerSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footerLinks {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .socialLinks {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .footerNavLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .rightSection {
+    padding-right: 0;
+    text-align: left;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 28px;
+  }
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./FeaturedServices.module.css";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -7,7 +6,7 @@ const FeaturedServices = () => {
     <section className={styles.featuredServicesSection}>
       {/* Top Title & Tagline */}
       <div className={styles.headerContainer}>
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div className={styles.titleRow}>
           <h2 className={styles.featuredTitle}>
             FEATURED SERVICES. <span className={styles.divider}></span>
           </h2>
